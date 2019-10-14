@@ -2,14 +2,18 @@ require 'rails_helper'
 
 describe 'As a user' do
 
-  it "when I visit root_path and select 'Griffindor' from the select field and click 'Search For Members' I should be on the '/search' page and see a total of the number of members for that house and a list of the house members" do
+  it "when I visit root_path and select 'Gryffindor' from the select field and click 'Search For Members' I should be on the '/search' page and see a total of the number of members for that house and a list of the house members" do
 
-    visit '/'
-    # select('Griffindor') Griffindor is already the default within the drop-down
+    visit root_path
+    #select('Gryffindor') Gryffindor is already the default within the drop-down
+     within(".navbar") do
+       select 'Gryffindor', from: :house
+     end
     click_on('Search For Members')
-    expect(current_path).to eq()
 
-    expect(page).to have_content('Griffindor (21 Members)')
+    expect(current_path).to eq(search_path)
+
+    expect(page).to have_content('Gryffindor (21 Members)')
 
     witin '.house-members' do
       expect(page).to have_css(".house-member", count: 18)

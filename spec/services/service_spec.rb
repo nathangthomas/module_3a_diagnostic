@@ -1,17 +1,17 @@
 require 'rails_helper'
 
-describe ServiceName do
+describe HouseService do
   it "returns parsed data" do
 
-    service = ServiceName.new or
-    service = subject.ServiceName
+    service = HouseService.new
+    response = service.get_data
+    parsed_data = JSON.parse(response.body, symbolize_names: true)
 
-    whatever_it_is = service.get_what_ever_it_is
+    expect(parsed_data).to be_an Array
+    expect(parsed_data[0]).to be_a Hash
 
-    expect(whatever_it_is).to be_an Array
-    expect(whatever_it_is[0]).to be_a Hash
-
-    expect(whatever_it_is.first).to have_key(:key_1)
-    expect(whatever_it_is.first).to have_key(:key_2)
+    expect(parsed_data.first).to have_key(:name)
+    expect(parsed_data.first).to have_key(:role)
+    expect(parsed_data.first).to have_key(:house)
   end
 end
