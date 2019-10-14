@@ -1,38 +1,16 @@
 require 'rails_helper'
 
-describe 'As a registered user' do
+describe 'As a user' do
   before :each do
     # Add your before block here
+  end
+
+  it "when I visit root_path and select 'Griffindor' from the select field and click 'Search For Members' I should be on the '/search' page and see a total of the number of members for that house and a list of the house members" do
 
   end
 
-  it 'can see what the user can see' do
 
-    #visit path
+  it "for each member I should see their name, role, house and patronus" do
 
-    #fill_in 'Email', with: user.email
-    #fill_in 'Password', with: user.password
-
-    #click_on 'Log In'
-
-    #within '.class-name' do
-      #expect(page).to have_content('content')
-      #within '.class-name' do
-        #expect(page).to have_css('.class-name', count: ?)
-      #end
-    # end
   end
-
-  it 'can see more of what the user can see' do
-
-    # visit path
-
-    # within '.class-name' do
-    #   expect(page).to have_content('content')
-    #   within '.class-name' do
-    #     expect(page).to have_link('link-name')
-    #     expect(page).to have_link("link-name")
-    #   end
-    # end
-  end 
-end
+end 
