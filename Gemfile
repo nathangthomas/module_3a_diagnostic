@@ -13,6 +13,10 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'faraday'
 gem 'figaro'
+gem 'jquery-rails'
+gem 'sqlite3'
+
+
 
 group :development, :test do
   gem 'pry'
