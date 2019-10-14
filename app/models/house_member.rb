@@ -1,4 +1,4 @@
-class HouseMembers
+class HouseMember
   attr_reader :name, :role, :house, :patronus
 
   def initialize(data = {})

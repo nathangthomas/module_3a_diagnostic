@@ -7,7 +7,7 @@ describe 'As a user' do
     visit '/'
     # select('Griffindor') Griffindor is already the default within the drop-down
     click_on('Search For Members')
-    expect(current_path).to eq('/search')
+    expect(current_path).to eq()
 
     expect(page).to have_content('Griffindor (21 Members)')
 

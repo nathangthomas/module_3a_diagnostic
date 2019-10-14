@@ -1,5 +1,5 @@
 <% @house_members.each do |member| %>
-  <h1> <%= "#{member.house} (#{member.count} Members)" %> </h1>
+  <h1> <%= "#{member.house} (#{@house_members.count} Members)" %> </h1>
     <ul class='house-member'>
       <li class='name'> <%= member.name %> </li>
       <li class='role'> <%= member.role %> </li>
