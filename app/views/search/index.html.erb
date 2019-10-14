@@ -1,9 +1,10 @@
+
+<h1> <%= " #{@house_members.count} Members " %> </h1>
 <% @house_members.each do |member| %>
-  <h1> <%= "#{member.house} (#{@house_members.count} Members)" %> </h1>
-    <ul class='house-member'>
-      <li class='name'> <%= member.name %> </li>
-      <li class='role'> <%= member.role %> </li>
-      <li class='house'> <%= member.house %> </li>
-      <li class='patronus'> <%= member.patronus %> </li>
+<ul class='house-member'>
+      <li class='name'> House Member: <%= member.name %> </li>
+      <p class='role'> Role: <%= member.role %> </p>
+      <p class='house'> House: <%= member.house %> </p>
+      <p class='patronus'> Patronus: <%= member.patronus %> </p>
     </ul>
 <% end %>

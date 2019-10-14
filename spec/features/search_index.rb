@@ -13,7 +13,7 @@ describe 'As a user' do
 
     expect(current_path).to eq(search_path)
 
-    expect(page).to have_content('Gryffindor (21 Members)')
+    expect(page).to have_content('21 Members')
 
     witin '.house-members' do
       expect(page).to have_css(".house-member", count: 18)
