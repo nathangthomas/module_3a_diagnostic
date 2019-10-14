@@ -9,7 +9,7 @@ describe 'As a user' do
     click_on('Search For Members')
     expect(current_path).to eq('/search')
 
-    expect(page).to have_content('Griffindor')
+    expect(page).to have_content('Griffindor (18 Members)')
 
     witin '.house-members' do
       expect(page).to have_css(".house-member", count: 18)
