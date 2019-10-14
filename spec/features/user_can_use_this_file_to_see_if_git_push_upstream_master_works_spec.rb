@@ -5,7 +5,7 @@ describe 'As a user' do
   it "when I visit root_path and select 'Griffindor' from the select field and click 'Search For Members' I should be on the '/search' page and see a total of the number of members for that house and a list of the house members" do
 
     visit '/'
-    select('Griffindor')
+    # select('Griffindor') Griffindor is already the default within the drop-down
     click_on('Search For Members')
     expect(current_path).to eq('/search')
 
